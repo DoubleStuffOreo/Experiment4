@@ -1,0 +1,78 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main ()
+{
+    char n, cont;
+    int num1 = 0, num2 = 0, sum, diff, product, quo, mod;
+    bool userquit = true;
+    
+    cout << "MENU:\n";
+    cout << "1. Add \n";
+    cout << "2. Subtract \n";
+    cout << "3. Multiply \n";
+    cout << "4. Divide \n";
+    cout << "5. Modulus \n \n";
+   
+    // do-while loop
+    do
+    {
+        
+        //enter number choice
+        cout << "Enter your choice: ";
+        cin >> n;
+    
+        //enter two integers
+        cout << "Enter your two numbers: ";
+        cin >> num1 >> num2;
+
+    
+        switch (n)
+        {
+            //add
+            case '1':
+                sum = num1 + num2;
+                cout << "Result: " << sum << endl;
+                break;
+            
+            //subt
+            case '2':
+                diff = num1 - num2;
+                cout << "Result: " << diff << endl;
+                break;
+            
+            //mult
+            case '3':
+                product = num1 * num2;
+                cout << "Result: " << product << endl;
+                break;
+                
+            //divide
+            case '4':
+                quo = num1 / num2;
+                cout << "Result: " << quo << endl;
+                break;
+            
+            //modulus
+            case '5':
+                mod = num1 % num2;
+                cout << "Result: " << mod << endl;
+                break;
+        } //end of switch
+        
+        cout << "Continue? ";
+        cin >> cont;
+        
+        if (cont != 'y')
+        {userquit = true;}
+        else if (cont == 'y')
+        {
+            userquit = false;
+        }
+        
+    } while (userquit == false );
+    
+    return 0;
+}
